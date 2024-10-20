@@ -12,6 +12,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware para parsear JSON
+app.use(cors({
+    origin: '*',
+  }));
 app.use(express.json());
 
 // Conectar a MongoDB
